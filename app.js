@@ -4,15 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultsDiv = document.getElementById("results");
 
     searchButton.addEventListener("click", function () {
-        const query = searchInput.value.trim();
+        // Sanitize user input
+        const query = encodeURIComponent(searchInput.value.trim());
 
+        // Create an AJAX request
         const xhr = new XMLHttpRequest();
         xhr.open("GET", "superheroes.php?q=" + query, true);
 
         xhr.onload = function () {
             if (xhr.status === 200) {
-                // Display the response inside the #results div
-                resultsDiv.innerHTML = xhr.responseText;
+                // Check if response contains valid content
+                if (xhr.responseText.trim()) {
+                    resultsDiv.innerHTML = xhr.responseText;
+                } else {
+                    resultsDiv.innerHTML = "<p>Superhero not found</p>";
+                }
             } else {
                 resultsDiv.innerHTML = "<p>An error occurred while fetching results.</p>";
             }

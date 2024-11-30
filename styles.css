@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0e0e0;
+    background-color: #f3f1f7; /* Light purple background */
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,32 +11,34 @@ body {
 
 .container {
     text-align: center;
-    background-color: #f8f9fa;
-    padding: 20px;
+    background-color: #ffffff; /* White background for the container */
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 400px;
+    border: 2px solid #7a4a91; /* Purple border for the container */
 }
 
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #7a4a91; /* Purple color for the title */
 }
 
 input[type="text"] {
     padding: 10px;
     width: 70%;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #7a4a91; /* Purple border */
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: #f9f3ff; /* Light purple background for the input */
 }
 
 button {
     padding: 10px 20px;
     font-size: 14px;
-    background-color: #007bff;
+    background-color: #7a4a91; /* Purple background for button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,15 +46,31 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #6a3a81; /* Darker purple for hover effect */
 }
 
 #results {
     margin-top: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid #7a4a91; /* Purple border */
     padding: 10px;
     border-radius: 5px;
     text-align: left;
+    color: #7a4a91; /* Purple text color */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #7a4a91; /* Purple color for list items */
+}
+
+h3, h4 {
+    color: #7a4a91; /* Purple color for superhero alias and name */
 }
 
